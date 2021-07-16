@@ -30,7 +30,7 @@ public class JwtProvider {
         User principal = (User) authentication.getPrincipal();
         return Jwts.builder()
                 .setSubject(principal.getUserName())
-                .signWith(null, key)
+                .signWith(key)
                 .compact();
     }
 }
